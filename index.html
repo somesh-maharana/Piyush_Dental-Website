@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shivam Dental Clinic - Your Smile, Our Mission</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+    header {
+      background-color: #6495ED;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('https://ik.imagekit.io/7nyu6uqs0/dental-chair-other-accesorries-used-by-dentist-empty-cabinet-stomatology-cabinet-with-nobody-it-orange-equipment-oral-treatment.jpg?updatedAt=1753340079802') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    }
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+      margin: auto;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+    .hero button {
+      margin-top: 25px;
+      padding: 18px 40px;
+      background: #1e90ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba();
+      transition: 0.3s ease;
+    }
+    .hero button:hover {
+      background: #e64a19;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #1e90ff;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    footer {
+      background-color: #6495ED;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    #floating-cta {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #1e90ff;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 6px 15px rgba();
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+      font-size: 18px;
+    }
+    #floating-cta:hover {
+      background-color: #e64a19;
+    }
+
+    /* Popup Styles */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+    .popup-content {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: 80px auto;
+      position: relative;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .popup-content h2 {
+      text-align: center;
+      color: #1e90ff;
+    }
+    .popup-content label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: 600;
+    }
+    .popup-content input, .popup-content select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+    .submit-btn {
+      background: #1e90ff;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+    }
+    .submit-btn:hover {
+      background: #187bcd;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      color: #aaa;
+      cursor: pointer;
+    }
+    .close-btn:hover {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Shivam Dental</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h2>Your Smile, Our Mission</h2>
+      <p>Welcome to Shivam Dental Clinic. We provide painless, affordable, and expert dental care for all ages.</p>
+      <button onclick="openPopup()">Book an Appointment</button>
+    </div>
+  </div>
+
+  <section>
+    <h2>Our Key Services</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://ik.imagekit.io/7nyu6uqs0/teeth-cleaning-1514692_640.jpg?updatedAt=1753340845099" alt="Teeth Cleaning" />
+        <h3>Teeth Cleaning</h3>
+        <p>Get rid of plaque &amp; tartar with expert cleaning for a bright smile.</p>
+      </div>
+      <div class="card">
+        <img src="https://ik.imagekit.io/7nyu6uqs0/young-man-with-patient-bib-dental-chair-dentist-who-sits-him-he-looks-his-teeth-using-dental-microscope-holds-dental-bur-mirror.jpg?updatedAt=1753340684338" alt="Root Canal" />
+        <h3>Root Canal</h3>
+        <p>Painless solutions to tooth pain caused by infected pulp.</p>
+      </div>
+      <div class="card">
+        <img src="https://ik.imagekit.io/7nyu6uqs0/braces-9055493_640.jpg?updatedAt=1753340930965" alt="Braces" />
+        <h3>Braces &amp; Aligners</h3>
+        <p>Advanced orthodontics to align your teeth for a confident smile.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why Choose Us?</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://ik.imagekit.io/7nyu6uqs0/portrait-smiling-dentist-standing-with-arms-crossed-with-her-colleague%20(1).jpg?updatedAt=1753341628433" alt="Experienced Dentists" />
+        <h3>Experienced Dentists</h3>
+        <p>Our experts have over 10 years of experience in dental care.</p>
+      </div>
+      <div class="card">
+        <img src="https://ik.imagekit.io/7nyu6uqs0/pexels-karolina-grabowska-4386183.jpg?updatedAt=1753343309358" alt="Affordable Care" />
+        <h3>Affordable Treatments</h3>
+        <p>We offer the best quality care at affordable prices for everyone.</p>
+      </div>
+      <div class="card">
+        <img src="https://ik.imagekit.io/7nyu6uqs0/pexels-fr3nks-287237.jpg?updatedAt=1753343220928" alt="Advanced Tech" />
+        <h3>Modern Technology</h3>
+        <p>State-of-the-art tools &amp; hygienic setup for efficient treatments.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Shivam Dental Clinic. All rights reserved.</p>
+  </footer>
+
+  <!-- Floating CTA -->
+  <a href="javascript:void(0);" id="floating-cta" onclick="openPopup()">Book Appointment</a>
+
+  <!-- Appointment Popup -->
+  <div class="popup" id="appointmentPopup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>Book Your Appointment</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Email Address" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+
+        <label for="service">Select Service</label>
+        <select id="service" required>
+          <option value="">Select Service</option>
+          <option>Teeth Cleaning</option>
+          <option>Root Canal</option>
+          <option>Braces & Alignment</option>
+          <option>Dental Implants</option>
+        </select>
+
+        <label for="datetime">Preferred Date & Time</label>
+        <input type="datetime-local" id="datetime" required>
+
+        <input type="submit" class="submit-btn" value="Book Now">
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openPopup() {
+      document.getElementById("appointmentPopup").style.display = "block";
+    }
+    function closePopup() {
+      document.getElementById("appointmentPopup").style.display = "none";
+    }
+    window.onclick = function(event) {
+      const popup = document.getElementById("appointmentPopup");
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
