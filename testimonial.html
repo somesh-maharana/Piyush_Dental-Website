@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Testimonials - Shivam Dental Clinic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background: #ffffff;
+      color: #333;
+    }
+
+    header {
+      background: #1e90ff;
+      padding: 15px 30px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background-image: url('https://ik.imagekit.io/7nyu6uqs0/patient-shaking-hand-with-dentist%20(1).jpg?updatedAt=1753416642283');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 48px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .testimonial-slider {
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 40px 0;
+      background: #f7f7f7;
+    }
+
+    .slider-track {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll 40s linear infinite;
+    }
+
+    .testimonial {
+      display: inline-block;
+      width: 300px;
+      margin: 0 15px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      vertical-align: top;
+    }
+
+    .testimonial img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .testimonial h4 {
+      margin: 10px 0 5px;
+      color: #1e90ff;
+    }
+
+    .testimonial p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .submit-section {
+      padding: 50px 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .submit-section h2 {
+      color: #1e90ff;
+      margin-bottom: 20px;
+    }
+
+    .submit-section form input,
+    .submit-section form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .submit-section form button {
+      background: #1e90ff;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #1e90ff;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>Shivam Dental</h2>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>What Our Patients Say</h1>
+</section>
+
+<section class="testimonial-slider">
+  <div class="slider-track">
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+      <h4>Neha Sinha</h4>
+      <p>“Wonderful experience! The staff was friendly and my root canal was completely painless.”</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Client">
+      <h4>Ravi Kumar</h4>
+      <p>“Highly professional and hygienic clinic. I recommend Shivam Dental to everyone.”</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client">
+      <h4>Priya Mehta</h4>
+      <p>“Best dental implant service I’ve received. The doctor explained everything clearly.”</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="Client">
+      <h4>Vikram Joshi</h4>
+      <p>“I was nervous about getting braces but the experience was smooth and reassuring.”</p>
+    </div>
+    <!-- Duplicated to create loop effect -->
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+      <h4>Neha Sinha</h4>
+      <p>“Wonderful experience! The staff was friendly and my root canal was completely painless.”</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Client">
+      <h4>Ravi Kumar</h4>
+      <p>“Highly professional and hygienic clinic. I recommend Shivam Dental to everyone.”</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client">
+      <h4>Priya Mehta</h4>
+      <p>“Best dental implant service I’ve received. The doctor explained everything clearly.”</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="Client">
+      <h4>Vikram Joshi</h4>
+      <p>“I was nervous about getting braces but the experience was smooth and reassuring.”</p>
+    </div>
+  </div>
+</section>
+
+<section class="submit-section">
+  <h2>Share Your Experience</h2>
+  <form onsubmit="submitTestimonial(event)">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="url" id="image" placeholder="Image URL (Optional)">
+    <textarea id="feedback" placeholder="Your Testimonial" rows="5" required></textarea>
+    <button type="submit">Submit Testimonial</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Shivam Dental Clinic. All rights reserved.</p>
+</footer>
+
+<script>
+  function submitTestimonial(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const feedback = document.getElementById('feedback').value.trim();
+    const image = document.getElementById('image').value.trim() || 'https://randomuser.me/api/portraits/lego/1.jpg';
+
+    if (name && feedback) {
+      const newTestimonial = document.createElement('div');
+      newTestimonial.classList.add('testimonial');
+      newTestimonial.innerHTML = `
+        <img src="${image}" alt="Client">
+        <h4>${name}</h4>
+        <p>“${feedback}”</p>
+      `;
+      document.querySelector('.slider-track').appendChild(newTestimonial);
+      alert("Thank you! Your testimonial has been submitted.");
+      e.target.reset();
+    }
+  }
+</script>
+
+</body>
+</html>
